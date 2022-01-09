@@ -12,6 +12,18 @@ class Atom {
           protons_(protons),
           neutrons_(neutrons) {}
 
+    uint64_t electrons() const noexcept {
+        return electrons_;
+    }
+
+    uint64_t protons() const noexcept {
+        return protons_;
+    }
+
+    uint64_t neutrons() const noexcept {
+        return neutrons_;
+    }
+
     bool Exists() {
         if (electrons_ > 0 || protons_ > 0 || neutrons_ > 0) {
             return true;
@@ -23,9 +35,10 @@ class Atom {
     void Consume() {
         electrons_ = 0;
         protons_ = 0;
-        neutrons = 0;
+        neutrons_ = 0;
     }
 
+    private:
     uint64_t electrons_;
     uint64_t protons_;
     uint64_t neutrons_;
