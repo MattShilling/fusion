@@ -38,11 +38,14 @@ class Atom {
         neutrons_ = 0;
     }
 
-    private:
+  private:
     uint64_t electrons_;
     uint64_t protons_;
     uint64_t neutrons_;
 };
+
+static Atom Neutron(0, 0, 1);
+static Atom Proton(0, 1, 0);
 
 // Hydrogen atoms.
 static Atom Protium(1, 1, 0);
