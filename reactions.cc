@@ -37,7 +37,7 @@ static bool consume_atoms_if_all_exist(
         plucked_atoms.size() == atoms_to_consume.size();
 
     if (!consumed_all_atoms) {
-        // We we're not able to pluck all the atoms from the soup
+        // We were not able to pluck all the atoms from the soup
         // that we were instructed to consume. Put the atoms we
         // removed back into the soup.
         for (Atom atom_to_put_back : plucked_atoms) {
