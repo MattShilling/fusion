@@ -1,5 +1,9 @@
-// Defines a class to represent an atom and makes a few static ones
-// commonly used.
+// Matt Shilling 2022
+
+/**
+ * @brief Defines a class to represent an atom and makes a few static
+ * ones commonly used.
+ */
 
 #pragma once
 
@@ -25,11 +29,7 @@ class Atom {
     }
 
     bool Exists() {
-        if (electrons_ > 0 || protons_ > 0 || neutrons_ > 0) {
-            return true;
-        }
-
-        return false;
+        return (electrons_ > 0) || (protons_ > 0) || (neutrons_ > 0);
     }
 
     void Consume() {

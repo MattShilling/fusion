@@ -1,3 +1,5 @@
+// Matt Shilling 2022
+
 #pragma once
 
 #include <random>
@@ -7,14 +9,27 @@
 #include "units.h"
 
 namespace Reactions {
-//
-struct Product {
-    std::vector<Atom> atoms;
-    double energy;
-};
 
-int find_atom(Atom search, std::vector<Atom> &soup, size_t idx = 0);
+namespace DeuteriumDeuterium {
+const size_t FirstReactionBranch = 0;
+const size_t Helium3Reaction = 0;
+const size_t TritiumReaction = 1;
+const size_t LastReactionBranch = 1;
+double react(std::vector<Atom> &soup);
+}  // namespace DeuteriumDeuterium
 
-double deuterium_deuterium(std::vector<Atom> &soup);
+namespace DeuteriumHelium3 {
+const size_t FirstReactionBranch = 0;
+const size_t Helium4Reaction = 0;
+const size_t LastReactionBranch = 0;
+double react(std::vector<Atom> &soup);
+}  // namespace DeuteriumHelium3
+
+namespace DeuteriumTritium {
+const size_t FirstReactionBranch = 0;
+const size_t Helium4Reaction = 0;
+const size_t LastReactionBranch = 0;
+double react(std::vector<Atom> &soup);
+}  // namespace DeuteriumTritium
 
 }  // namespace Reactions
