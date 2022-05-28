@@ -2,6 +2,8 @@
 
 #include "reactions.h"
 
+#include <vector>
+
 static Atom pluck_atom(Atom search, std::vector<Atom> &soup) {
     Atom result(0, 0, 0);
     for (ssize_t i = 0; i < soup.size(); i++) {
